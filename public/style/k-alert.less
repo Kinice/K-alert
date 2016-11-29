@@ -1,0 +1,55 @@
+.k-alert{
+	#pop-mask{
+		display: none;
+		position: fixed;
+		width: 100%;
+		height: 1200px;
+		z-index: 999;
+		left: 0;
+		top: 0;
+		background: rgba(0,0,0,0.3);
+	}
+	#pop-container{
+		display: none;
+		position: fixed;
+		width: 340px;
+		min-height: 140px;
+		background: #f2f2f2;
+		left: 50%;
+		top: 20%;
+		z-index: 1000;
+		transform: translateX(-50%);
+		.pop-main{
+			padding: 20px 30px 50px;
+		}
+		.pop-btn{
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			.alertBtn{
+				width: 100%;
+				line-height: 30px;
+				border: none;
+				background: #62a924;
+				color: #fff;
+				outline: none;
+				cursor: pointer;
+				font-size: 14px;
+			}
+			.confirmTrue,.confirmFalse{
+				width: 50%;
+				line-height: 30px;
+				border: none;
+				background: #62a924;
+				color: #fff;
+				outline: none;
+				cursor: pointer;
+				font-size: 14px;
+			}
+			.confirmTrue{
+				border-right: 1px solid #f2f2f2;
+			}
+		}
+	}
+}
