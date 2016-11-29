@@ -9,6 +9,5 @@
 3. 在文档底部引用k-alert.js
 4. 使用：
 
-	kalert('你要alert的话');
-
-	kconfirm('你要confirm的话',callback);
+	`kalert('你要alert的话');`
+	`kconfirm('你要confirm的话',callback);`
