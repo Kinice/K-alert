@@ -27,8 +27,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			.alertBtn{
-				width: 100%;
+			input[type=button]{
 				line-height: 30px;
 				border: none;
 				background: #62a924;
@@ -36,19 +35,18 @@
 				outline: none;
 				cursor: pointer;
 				font-size: 14px;
+				&:hover{
+					background: #4d851d;
+				}
+			}
+			.alertBtn{
+				width: 100%;		
 			}
 			.confirmTrue,.confirmFalse{
 				width: 50%;
-				line-height: 30px;
-				border: none;
-				background: #62a924;
-				color: #fff;
-				outline: none;
-				cursor: pointer;
-				font-size: 14px;
 			}
 			.confirmTrue{
-				border-right: 1px solid #f2f2f2;
+				border-right: 1px solid #f2f2f2 !important;
 			}
 		}
 	}
