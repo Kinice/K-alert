@@ -81,6 +81,7 @@
 		},
 
 		kalert: function(str, btnstr){
+			console.log(btnstr)
 			var str = typeof str === 'string' ? str : str.toString(),
 				$ovl = this.get('ovl');
 
@@ -91,7 +92,7 @@
 			if(typeof btnstr == 'undefined'){
 				$ovl.find('.pop-btn').html(HTM.alert);
 			}else{
-				$ovl.find('.pop-btn').html(btnstr);
+				$ovl.find('.pop-btn').html('<input type="button" class="alertBtn" value="'+btnstr+'">');
 			}
 
 			this.show();
@@ -133,8 +134,8 @@
 
 	var obj = new winPop();
 
-	window.kalert = function(str){
-		obj.kalert.call(obj, str);
+	window.kalert = function(str,btnstr){
+		obj.kalert.call(obj, str,btnstr);
 	}
 
 	window.kconfirm = function(str,callback){
