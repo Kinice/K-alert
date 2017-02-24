@@ -2,7 +2,7 @@
 
 	var HTM = {
         ovl: '<div class="k-alert">'+'<div id="pop-mask"></div>' + '<div id="pop-container">' + '<div class="pop-main"></div>' + '<div class="pop-btn"></div>' + '</div>'+'</div>',
-        alert: '<input type="button" class="alertBtn" value="确定">',
+        alert: '<input type="button" class="alertBtn" value="OK">',
         confirm: '<input type="button" class="confirmTrue" value="确定">' + '<input type="button" class="confirmFalse" value="取消">'
     }
 
@@ -60,24 +60,6 @@
 
 				cb && cb(false);
 			});
-
-			// $mask.on('click', function(e){
-			// 	that.hide();
-			// });
-
-			// $(document).on('keyup', function(e) {
-			// 	var kc = e.keyCode,
-			// 		cb = that.get('confirmBack');
-
-			// 	if(kc === 27) {
-			// 		that.hide();
-			// 	}else if(kc === 13) {
-			// 		that.hide();
-			// 		if(that.get('type') === 'confirm') {
-			// 			cb && cb(true);
-			// 		}
-			// 	}
-			// });
 		},
 
 		kalert: function(str, btnstr){
