@@ -3,7 +3,7 @@
 	var HTM = {
         ovl: '<div class="k-alert">'+'<div id="pop-mask"></div>' + '<div id="pop-container">' + '<div class="pop-main"></div>' + '<div class="pop-btn"></div>' + '</div>'+'</div>',
         alert: '<input type="button" class="alertBtn" value="OK">',
-        confirm: '<input type="button" class="confirmTrue" value="确定">' + '<input type="button" class="confirmFalse" value="取消">'
+        confirm: '<input type="button" class="confirmTrue" value="OK">' + '<input type="button" class="confirmFalse" value="Cancel">'
     }
 
 	function winPop(){
@@ -63,7 +63,6 @@
 		},
 
 		kalert: function(str, btnstr){
-			console.log(btnstr)
 			var str = typeof str === 'string' ? str : str.toString(),
 				$ovl = this.get('ovl');
 
@@ -88,6 +87,8 @@
 
 			$ovl.find('.pop-main').html(str);
 			$ovl.find('.pop-btn').html(HTM.confirm);
+
+			console.log(callback)
 
 			this.set('confirmBack', (callback || function(){}));
 			this.show();
@@ -121,6 +122,7 @@
 	}
 
 	window.kconfirm = function(str,callback){
+		console.log(callback);
 		obj.kconfirm.call(obj, str, callback);
 	}
 })(window, $);
