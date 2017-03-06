@@ -1,3 +1,7 @@
+//common
+@backgroundColor: #62a924;
+@hoverColor: #4d851d;
+@maskColor: rgba(0,0,0,0.3);
 .k-alert{
 	#pop-mask{
 		display: none;
@@ -7,7 +11,7 @@
 		z-index: 9000000;
 		left: 0;
 		top: 0;
-		background: rgba(0,0,0,0.3);
+		background: @maskColor;
 	}
 	#pop-container{
 		display: none;
@@ -30,13 +34,13 @@
 			input[type=button]{
 				line-height: 30px;
 				border: none;
-				background: #62a924;
+				background: @backgroundColor;
 				color: #fff;
 				outline: none;
 				cursor: pointer;
 				font-size: 14px;
 				&:hover{
-					background: #4d851d;
+					background: @hoverColor;
 				}
 			}
 			.alertBtn{
